@@ -43,9 +43,9 @@ impl Component for Home {
     fn view(&self) -> Html {
         html! {
             <div>
-                <button onclick=self.link.callback(|_| Msg::AddOne)>{ "+1" }</button>
-                <button onclick=self.link.callback( |_| Msg::SubtractOne )>{"-1"}</button>
-                <button onclick=self.link.callback(|_| Msg::MultiplyByTwo)>{"*2"}</button>
+                <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::AddOne)>{ "+1" }</button>
+                <button class="btn btn-danger" onclick=self.link.callback( |_| Msg::SubtractOne )>{"-1"}</button>
+                <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::MultiplyByTwo)>{"*2"}</button>
                 // <Counter count={self.value}/>
                 <Counter>
                     <p>{self.value}</p>
