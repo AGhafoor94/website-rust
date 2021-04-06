@@ -7,9 +7,12 @@ This is a test on how to code in Rust with components that acts like React but i
 This is building to WebAssembly.
 
 #### Commands
-wasm-pack build --target web --out-name wasm --out-dir ./static (to build into the static folder)
+- install cargo and rust
+- cargo new --lib name-of-app && cd name-of-app
+
+- wasm-pack build --target web --out-name wasm --out-dir ./static (to build into the static folder)
 Using python to create server
-python -m http.server 8000 --directory static (in the folder)
+- python -m http.server 8000 --directory static (in the folder)
 
 ### Components/Building
 

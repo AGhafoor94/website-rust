@@ -1,8 +1,6 @@
 use yew::prelude::*;
 
 // mod counter;
-
-use crate::app_router::AppRoute;
 use crate::components::counter::Counter;
 
 pub struct Home {
@@ -43,13 +41,22 @@ impl Component for Home {
     fn view(&self) -> Html {
         html! {
             <div>
-                <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::AddOne)>{ "+1" }</button>
-                <button class="btn btn-danger" onclick=self.link.callback( |_| Msg::SubtractOne )>{"-1"}</button>
-                <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::MultiplyByTwo)>{"*2"}</button>
-                // <Counter count={self.value}/>
-                <Counter>
-                    <p>{self.value}</p>
-                </Counter>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/background-image.jpg" class="d-block w-100" alt="Background Image"/>
+                    </div>
+                </div>
+                </div>
+                <div class="container">
+                    <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::AddOne)>{ "+1" }</button>
+                    <button class="btn btn-danger" onclick=self.link.callback( |_| Msg::SubtractOne )>{"-1"}</button>
+                    <button class="btn btn-primary" onclick=self.link.callback(|_| Msg::MultiplyByTwo)>{"*2"}</button>
+                    // <Counter count={self.value}/>
+                    <Counter>
+                        <p>{self.value}</p>
+                    </Counter>
+                </div>
             </div>
         }
     }
